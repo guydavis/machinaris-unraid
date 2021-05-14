@@ -10,14 +10,14 @@
   <Support/>
   <Project>https://github.com/guydavis/machinaris</Project>
   <Overview>Building upon the official Chia docker image, Machinaris combines the Plotman CLI with a simple WebUI for Unraid.</Overview>
-  <Category/>
+  <Category>Other: Network:Other Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:8926]/</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris.png</Icon>
-  <ExtraParams/>
+  <ExtraParams>-t</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1620960930</DateInstalled>
+  <DateInstalled>1620961274</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Building upon the official Chia docker image, Machinaris combines the Plotman CLI with a simple WebUI for Unraid.</Description>
