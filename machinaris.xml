@@ -48,7 +48,7 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/data/crypto/chia/plots</HostDir>
+      <HostDir></HostDir>
       <ContainerDir>/plots</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -67,7 +67,7 @@
   </Environment>
   <Labels/>
   <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot storage." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/machinaris</Config>
-  <Config Name="plots" Target="/plots" Default="/mnt/user/data/crypto/chia/plots" Mode="rw" Description="Holds completed Chia plots for farming." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/data/crypto/chia/plots</Config>
+  <Config Name="plots" Target="/plots" Default="" Mode="rw" Description="Holds completed Chia plots for farming." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/data/crypto/chia/plots</Config>
   <Config Name="plotting" Target="/plotting" Default="" Mode="rw" Description="Your fast temp space for plotting, ideally an unassigned SSD." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="chia_rpc" Target="8555" Default="8555" Mode="tcp" Description="Chia protocol port for local harvesters etc." Type="Port" Display="always" Required="false" Mask="false">8555</Config>
   <Config Name="chia_protocol" Target="8444" Default="8444" Mode="tcp" Description="Sync port to the network.  Port-forward on your router!" Type="Port" Display="always" Required="false" Mask="false">8444</Config>
