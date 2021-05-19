@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/108896-support-machinaris-chia-crptocurrency-farming-plotman-plotting-unraid-webui/</support>
+  <Support>https://forums.unraid.net/topic/108896-support-machinaris-chia-crptocurrency-farming-plotman-plotting-unraid-webui/</Support>
   <Project>https://github.com/guydavis/machinaris</Project>
   <Overview>Building upon the official Chia docker image, Machinaris combines the Plotman CLI with a simple WebUI for Unraid.</Overview>
   <Category>Other: Network:Other Status:Beta</Category>
