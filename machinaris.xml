@@ -20,7 +20,7 @@
   <DateInstalled>1620961274</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>Building upon the official Chia docker image, Machinaris combines the Plotman CLI with a simple WebUI for Unraid.</Description>
+  <Description>Building upon the official Chia binaries, Machinaris also offers a plot manager, log monitor, and a simple WebUI for Unraid.</Description>
   <Networking>
     <Mode>host</Mode>
     <Publish>
