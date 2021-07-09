@@ -10,7 +10,7 @@
   <Support>https://forums.unraid.net/topic/108896-support-machinaris-chia-crptocurrency-farming-plotman-plotting-unraid-webui/</Support>
   <Project>https://github.com/guydavis/machinaris</Project>
   <Overview>Building upon the official Chia binaries, Machinaris also offers a plot manager, log monitor, and a simple WebUI for Unraid.</Overview>
-  <Category>Crypto: Status:Beta</Category>
+  <Category>Crypto: </Category>
   <WebUI>http://[IP]:[PORT:8926]/</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris.png</Icon>
