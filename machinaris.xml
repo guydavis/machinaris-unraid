@@ -70,6 +70,11 @@
       <Mode/>
     </Variable>
     <Variable>
+      <Value>/plots</Value>
+      <Name>flax_plots_dir</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>fullnode</Value>
       <Name>mode</Name>
       <Mode/>
@@ -97,4 +102,5 @@
   <Config Name="plots_dir" Target="plots_dir" Default="/plots" Mode="" Description="A colon-separated list of all in-container folders holding your completed plots." Type="Variable" Display="always" Required="false" Mask="false">/plots</Config>
   <Config Name="blockchains" Target="blockchains" Default="chia" Mode="" Description="A comma-separated list of blockchains to farm. Required: chia Optional: flax" Type="Variable" Display="advanced-hide" Required="false" Mask="false">chia,flax</Config>
   <Config Name="flax_protocol" Target="6888" Default="6888" Mode="tcp" Description="Sync port to the network.  Port-forward on your router!" Type="Port" Display="always" Required="false" Mask="false">6888</Config>  
+  <Config Name="flax_plots_dir" Target="flax_plots_dir" Default="/plots" Mode="" Description="A colon-separated list of all in-container folders holding your completed non-portable plots for Flax." Type="Variable" Display="always" Required="false" Mask="false">/plots</Config>
 </Container>
