@@ -14,7 +14,7 @@
   <WebUI>http://[IP]:[PORT:8926]/</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris.png</Icon>
-  <ExtraParams>-t</ExtraParams>
+  <ExtraParams></ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1620961274</DateInstalled>
