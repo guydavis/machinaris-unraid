@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>machinaris</Name>
+  <Name>machinaris-hddcoin</Name>
   <Repository>ghcr.io/guydavis/machinaris</Repository>
   <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-hddcoin:develop</Registry>
   <Network>bridge</Network>
