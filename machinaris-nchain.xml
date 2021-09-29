@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>machinaris</Name>
+  <Repository>ghcr.io/guydavis/machinaris</Repository>
+  <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-nchain:develop</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/108896-support-machinaris-chia-crptocurrency-farming-plotman-plotting-unraid-webui/</Support>
+  <Project>https://github.com/guydavis/machinaris</Project>
+  <Overview>Adds on farming of the NChain blockchain to the main Machinaris application.</Overview>
+  <Category>Crypto: Status:Beta</Category>
+  <WebUI>http://[IP]:[PORT:8926]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris.png</Icon>
+  <ExtraParams></ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Pre-requisite: Machinaris controller, containing Chia blockchain, which this NChain container will register with.  After first-launch of this NChain container, be sure to place your /mnt/user/appdata/machinaris-nchain/mnemonic.txt file in place and restart.  Be sure to set the LAN IP address of your Unraid server in the controller_host and worker_host variables. Finally port-forward tcp/58445 at your router.</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8929</HostPort>
+        <ContainerPort>8929</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>58445</HostPort>
+        <ContainerPort>58445</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/machinaris-nchain</HostDir>
+      <ContainerDir>/root/.chia</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/plots</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/plotting</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>/plots</Value>
+      <Name>plots_dir</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>fullnode</Value>
+      <Name>mode</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>nchain</Value>
+      <Name>blockchains</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>controller_host</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>worker_host</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>8929</Value>
+      <Name>worker_api_port</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris-nchain" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot storage." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/machinaris-nchain</Config>
+  <Config Name="plots" Target="/plots" Default="" Mode="rw" Description="Holds completed Chia plots for farming." Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="plotting" Target="/plotting" Default="" Mode="rw" Description="Your fast temp space for plotting, ideally a cache pool or unassigned SSD." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="plots_dir" Target="plots_dir" Default="/plots" Mode="" Description="A colon-separated list of all in-container folders holding your completed plots." Type="Variable" Display="always" Required="false" Mask="false">/plots</Config>
+  <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of your Unraid server on your LAN." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="worker_host" Target="worker_host" Default="" Mode="" Description="The IP address of your Unraid server on your LAN." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is fullnode.  Others: plotter, harvester, farmer, harvester+plotter, and farmer+plotter." Type="Variable" Display="advanced-hide" Required="false" Mask="false">fullnode</Config>
+</Container>
