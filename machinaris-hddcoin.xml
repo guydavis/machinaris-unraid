@@ -87,10 +87,11 @@
   </Environment>
   <Labels/>
   <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris-hddcoin" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot storage." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/machinaris-hddcoin</Config>
-  <Config Name="plots" Target="/plots" Default="" Mode="rw" Description="Holds completed Chia plots for farming." Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="plots" Target="/plots" Default="" Mode="rw" Description="Holds completed plots for farming." Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="plotting" Target="/plotting" Default="" Mode="rw" Description="Your fast temp space for plotting, ideally a cache pool or unassigned SSD." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="plots_dir" Target="plots_dir" Default="/plots" Mode="" Description="A colon-separated list of all in-container folders holding your completed plots." Type="Variable" Display="always" Required="false" Mask="false">/plots</Config>
   <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of your Unraid server on your LAN." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="worker_host" Target="worker_host" Default="" Mode="" Description="The IP address of your Unraid server on your LAN." Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is fullnode.  Others: plotter, harvester, farmer, harvester+plotter, and farmer+plotter." Type="Variable" Display="advanced-hide" Required="false" Mask="false">fullnode</Config>
+  <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is fullnode.  Others: plotter, harvester, farmer, harvester+plotter, and farmer+plotter." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
+  <Config Name="blockchains" Target="blockchains" Default="hddcoin" Mode="" Description="The blockchain to farm.  Leave set to 'hddcoin'." Type="Variable" Display="advanced-hide" Required="true" Mask="false">hddcoin</Config>
 </Container>
