@@ -57,6 +57,11 @@
         <ContainerPort>58445</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
+      <Port>
+        <HostPort>58448</HostPort>
+        <ContainerPort>58448</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
     </Publish>
   </Networking>
   <Data>
@@ -115,7 +120,8 @@
   <Config Name="plots_dir" Target="plots_dir" Default="/plots" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots:/plots1:/plots2" Type="Variable" Display="always" Required="false" Mask="false">/plots</Config>
   <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="worker_host" Target="worker_host" Default="" Mode="" Description="Again, the IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="worker_api_port" Target="8929" Default="8929" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8929 for NChain blockchain." Type="Port" Display="always" Required="true" Mask="false">8929</Config>
+  <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always" Required="true" Mask="false">8929</Config>
+  <Config Name="worker_port" Target="8929" Default="8929" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8929 for NChain blockchain." Type="Port" Display="always" Required="true" Mask="false">8929</Config>
   <Config Name="protocol_port" Target="58445" Default="58445" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always" Required="true" Mask="false">58445</Config>
   <Config Name="rpc_port" Target="58448" Default="58448" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always" Required="true" Mask="false">58448</Config>
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
