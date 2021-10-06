@@ -40,7 +40,7 @@
   &#xD;
   SETUP: After first-launch of this HDDCoin container, _copy_ your mnemonic pass-phrase (found in your main Machinaris 
   install at /mnt/user/appdata/machinaris/mnemonic.txt) over to this /mnt/user/appdata/machinaris-hddcoin/mnemonic.txt file in place 
-  and restart this container. Finally, don't forget to port-forward tcp/6888 at your router.&#xD;
+  and restart this container. Finally, don't forget to port-forward tcp/28448 at your router.&#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 &#xD;
   Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;</Description>
