@@ -38,8 +38,8 @@
   INSTALL: Set the host path to first directory containing plots using '/plots' Path. Add more Paths for additional host directories. 
   Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_host variables. &#xD;  
   &#xD;
-  SETUP: After first-launch of this Flax container, _copy_ your mnemonic pass-phrase (found in your main Machinaris 
-  install at /mnt/user/appdata/machinaris/mnemonic.txt) over to this /mnt/user/appdata/machinaris-flax/mnemonic.txt file in place 
+  SETUP: After first-launch of this Flax container, _copy_ your mnemonic pass-phrase from 
+  /mnt/user/appdata/machinaris/mnemonic.txt to /mnt/user/appdata/machinaris-flax/mnemonic.txt
   and restart this container. Finally, don't forget to port-forward tcp/6888 at your router.&#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 &#xD;
