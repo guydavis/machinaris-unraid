@@ -14,7 +14,7 @@
   PREREQUISITE: Machinaris application, containing Chia blockchain, which this Chives container will register with. &#xD;
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots' Path. Add more Paths for additional host directories. 
-  Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_host variables. &#xD;  
+  Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
   SETUP: After first-launch of this Chives container, _copy_ your mnemonic pass-phrase (found in your main Machinaris 
   install at /mnt/user/appdata/machinaris/mnemonic.txt) over to this /mnt/user/appdata/machinaris-chives/mnemonic.txt file in place 
@@ -36,7 +36,7 @@
   PREREQUISITE: Machinaris application, containing Chia blockchain, which this Chives container will register with. &#xD;
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots' Path. Add more Paths for additional host directories. 
-  Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_host variables. &#xD;  
+  Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
   SETUP: After first-launch of this Chives container, _copy_ your mnemonic pass-phrase from 
   /mnt/user/appdata/machinaris/mnemonic.txt to /mnt/user/appdata/machinaris-chives/mnemonic.txt
@@ -104,7 +104,7 @@
     </Variable>
     <Variable>
       <Value></Value>
-      <Name>worker_host</Name>
+      <Name>worker_address</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -119,7 +119,7 @@
   <Config Name="plotting" Target="/plotting" Default="" Mode="rw" Description="Your fast temp space for plotting, ideally a cache pool or unassigned SSD." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="plots_dir" Target="plots_dir" Default="/plots" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots:/plots1:/plots2" Type="Variable" Display="always" Required="false" Mask="false">/plots</Config>
   <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="worker_host" Target="worker_host" Default="" Mode="" Description="The IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="worker_address" Target="worker_address" Default="" Mode="" Description="The IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always" Required="true" Mask="false">8931</Config>
   <Config Name="worker_port" Target="8931" Default="8931" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8931 for Chives blockchain." Type="Port" Display="always" Required="true" Mask="false">8931</Config>
   <Config Name="protocol_port" Target="9699" Default="9699" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always" Required="true" Mask="false">9699</Config>
