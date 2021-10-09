@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>machinaris-hddcoin</Name>
-  <Repository>ghcr.io/guydavis/machinaris-hddcoin:develop</Repository>
+  <Repository>ghcr.io/guydavis/machinaris-hddcoin:test</Repository>
   <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-hddcoin</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -123,7 +123,7 @@
   <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="advanced-hide" Required="true" Mask="false">8930</Config>
   <Config Name="worker_port" Target="8930" Default="8930" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8930 for HDDCoin blockchain." Type="Port" Display="advanced-hide" Required="true" Mask="false">8930</Config>
   <Config Name="protocol_port" Target="28444" Default="28444" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="advanced-hide" Required="true" Mask="false">28444</Config>
-  <Config Name="rpc_port" Target="28448" Default="28448" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="advanced-hide" Required="true" Mask="false">28448</Config>
+  <Config Name="farmer_port" Target="28448" Default="28448" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="advanced-hide" Required="true" Mask="false">28448</Config>
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
   <Config Name="blockchains" Target="blockchains" Default="hddcoin" Mode="" Description="The blockchain to farm.  Leave set to 'hddcoin'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">hddcoin</Config>
 </Container>

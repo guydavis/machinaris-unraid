@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>machinaris-chives</Name>
-  <Repository>ghcr.io/guydavis/machinaris-chives:develop</Repository>
+  <Repository>ghcr.io/guydavis/machinaris-chives:test</Repository>
   <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-chives</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -123,7 +123,7 @@
   <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false">8931</Config>
   <Config Name="worker_port" Target="8931" Default="8931" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8931 for Chives blockchain." Type="Port" Display="always-hide" Required="true" Mask="false">8931</Config>
   <Config Name="protocol_port" Target="9699" Default="9699" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">9699</Config>
-  <Config Name="rpc_port" Target="9647" Default="9647" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">9647</Config>
+  <Config Name="farmer_port" Target="9647" Default="9647" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">9647</Config>
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
   <Config Name="blockchains" Target="blockchains" Default="chives" Mode="" Description="The blockchain to farm.  Leave set to 'chives'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">chives</Config>
 </Container>
