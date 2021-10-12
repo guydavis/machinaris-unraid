@@ -41,7 +41,7 @@
   &#xD;
   SETUP: After first-launch of this NChain container, _copy_ your mnemonic pass-phrase from 
   /mnt/user/appdata/machinaris/mnemonic.txt to /mnt/user/appdata/machinaris-nchain/mnemonic.txt
-  and restart this container. Finally, don't forget to port-forward tcp/58445 at your router.&#xD;
+  and restart this container. Finally, don't forget to port-forward tcp/38447 at your router.&#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 &#xD;
   Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;</Description>
@@ -59,8 +59,8 @@
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>58448</HostPort>
-        <ContainerPort>58448</ContainerPort>
+        <HostPort>38447</HostPort>
+        <ContainerPort>38447</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -124,7 +124,7 @@
   <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="advanced-hide" Required="true" Mask="false">8929</Config>
   <Config Name="worker_port" Target="8929" Default="8929" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8929 for NChain blockchain." Type="Port" Display="advanced-hide" Required="true" Mask="false">8929</Config>
   <Config Name="protocol_port" Target="58445" Default="58445" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="advanced-hide" Required="true" Mask="false">58445</Config>
-  <Config Name="farmer_port" Target="58448" Default="58448" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="advanced-hide" Required="true" Mask="false">58448</Config>
+  <Config Name="farmer_port" Target="38447" Default="38447" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="advanced-hide" Required="true" Mask="false">38447</Config>
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
   <Config Name="blockchains" Target="blockchains" Default="nchain" Mode="" Description="The blockchain to farm.  Leave set to 'nchain'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">nchain</Config>
 </Container>
