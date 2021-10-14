@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>machinaris</Name>
-  <Repository>ghcr.io/guydavis/machinaris:test</Repository>
+  <Repository>ghcr.io/guydavis/machinaris</Repository>
   <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris</Registry>
   <Network>host</Network>
   <MyIP/>
