@@ -40,10 +40,16 @@
   &#xD;
   SETUP: After first-launch of this HDDCoin container, _copy_ your mnemonic pass-phrase from 
   /mnt/user/appdata/machinaris/mnemonic.txt to /mnt/user/appdata/machinaris-hddcoin/mnemonic.txt
-  and restart this container. Finally, don't forget to port-forward tcp/28447 at your router.&#xD;
+  and restart this container. Finally, don't forget to port-forward tcp/28444 at your router.&#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 &#xD;
-  Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;</Description>
+  Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
+  &#xD;
+  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each
+  Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+  or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or 
+  FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing
+  the Work and assume any risks associated with Your exercise of permissions under this License.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -72,7 +78,7 @@
     </Volume>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/plots</ContainerDir>
+      <ContainerDir>/plots1</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
@@ -83,7 +89,7 @@
   </Data>
   <Environment>
     <Variable>
-      <Value>/plots</Value>
+      <Value>/plots1</Value>
       <Name>plots_dir</Name>
       <Mode/>
     </Variable>
@@ -115,9 +121,9 @@
   </Environment>
   <Labels/>
   <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris-hddcoin" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot storage." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris-hddcoin</Config>
-  <Config Name="plots" Target="/plots" Default="" Mode="rw" Description="Holds completed plots for farming. Create more Paths for additional folders like plots1,plots2,etc... " Type="Path" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="plots1" Target="/plots1" Default="" Mode="rw" Description="Holds completed plots for farming. Create more Paths for additional folders like plots1,plots2,etc... " Type="Path" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="plotting" Target="/plotting" Default="" Mode="rw" Description="Your fast temp space for plotting, ideally a cache pool or unassigned SSD." Type="Path" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="plots_dir" Target="plots_dir" Default="/plots" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots:/plots1:/plots2" Type="Variable" Display="always-hide" Required="false" Mask="false">/plots</Config>
+  <Config Name="plots_dir" Target="plots_dir" Default="/plots1" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots1:/plots2:/plots3" Type="Variable" Display="always-hide" Required="false" Mask="false">/plots1</Config>
   <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="worker_address" Target="worker_address" Default="" Mode="" Description="Again, the IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="advanced-hide" Required="true" Mask="false">8930</Config>
