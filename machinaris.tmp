@@ -20,25 +20,15 @@
   <DateInstalled>1620961274</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>Building upon the official Chia binaries, Machinaris also offers a plot manager, log monitor, and a 
-  simple WebUI for Unraid.
+  <Description>Building upon the official Chia binaries, Machinaris also offers a plot manager, log monitor, and a simple WebUI for Unraid.
   &#xD;
-  INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. 
-  Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
+  INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  SETUP: After launch, browse to port 8926 on your Unraid server and start the setup process there.  
-  See: https://github.com/guydavis/machinaris/wiki#getting-started 
-  Afterward, don't forget to port-forward tcp/8444 at your router.&#xD;
+  SETUP: After launch, browse to port 8926 on your Unraid server and start the setup process there. See: https://github.com/guydavis/machinaris/wiki#getting-started Afterward, don't forget to port-forward tcp/8444 at your router.&#xD;
   &#xD;
-  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 &#xD;
-  Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
+  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
   &#xD;
-  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each
-  Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-  or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or 
-  FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing
-  the Work and assume any risks associated with Your exercise of permissions under this License.
-  </Description>
+  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
