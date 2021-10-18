@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>machinaris-flax</Name>
-  <Repository>ghcr.io/guydavis/machinaris-flax:test</Repository>
+  <Repository>ghcr.io/guydavis/machinaris-flax</Repository>
   <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-flax</Registry>
   <Network>bridge</Network>
   <MyIP/>
