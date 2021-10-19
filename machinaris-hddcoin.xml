@@ -11,7 +11,7 @@
   <Project>https://github.com/guydavis/machinaris</Project>
   <Overview>Adds on farming of the HDDCoin blockchain to the main Machinaris application, alongside Chia. &#xD;
   &#xD;
-  PREREQUISITE: Machinaris application, containing Chia blockchain, which this HDDCoin container will register with. &#xD;
+  PREREQUISITE: Machinaris application (v0.6.0+), containing Chia blockchain, which this HDDCoin container will register with. &#xD;
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots' Path. Add more Paths for additional host directories. 
   Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
