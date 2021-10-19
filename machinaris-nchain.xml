@@ -13,7 +13,7 @@
   &#xD;
   PREREQUISITE: Machinaris application (v0.6.0+), containing Chia blockchain, which this NChain container will register with. &#xD;
   &#xD;
-  INSTALL: Set the host path to first directory containing plots using '/plots' Path. Add more Paths for additional host directories. 
+  INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. 
   Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
   SETUP: After first-launch of this NChain container, _copy_ your mnemonic pass-phrase (found in your main Machinaris 
@@ -36,7 +36,7 @@
   &#xD;
   PREREQUISITE: Machinaris application, containing Chia blockchain, which this NChain container will register with. &#xD;
   &#xD;
-  INSTALL: Set the host path to first directory containing plots using '/plots' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
+  INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
   SETUP: After first-launch of this NChain container, _copy_ your mnemonic pass-phrase from /mnt/user/appdata/machinaris/mnemonic.txt to /mnt/user/appdata/machinaris-nchain/mnemonic.txt and restart this container. Finally, don't forget to port-forward tcp/58445 at your router.&#xD;
   &#xD;

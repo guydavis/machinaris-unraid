@@ -13,7 +13,7 @@
   &#xD;
   PREREQUISITE: Machinaris application, containing Chia blockchain, which this Chives container will register with. &#xD;
   &#xD;
-  INSTALL: Set the host path to first directory containing plots using '/plots' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
+  INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
   SETUP: After first-launch of this Chives container, _copy_ your mnemonic pass-phrase (found in your main Machinaris install at /mnt/user/appdata/machinaris/mnemonic.txt) over to this /mnt/user/appdata/machinaris-chives/mnemonic.txt file in place and restart this container. Finally, don't forget to port-forward tcp/9699 at your router.&#xD;
   &#xD;
@@ -36,7 +36,7 @@
   &#xD;
   NOTE: Chives is great, but it requires entirely new plot files. You won't be able to farm your existing Chia plots as you can with the other forks like Flax, HDDCoin, etc.  Details: https://github.com/guydavis/machinaris/wiki/Chives
   &#xD;
-  INSTALL: Set the host path to first directory containing plots using '/plots' Path. Add more Paths for additional host directories. 
+  INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. 
   Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
   SETUP: After first-launch of this Chives container, _copy_ your mnemonic pass-phrase from 
