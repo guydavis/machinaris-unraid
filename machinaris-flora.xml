@@ -18,7 +18,7 @@
   &#xD;
   SETUP: After first-launch of this Flora container, _copy_ your mnemonic pass-phrase (found in your main Machinaris 
   install at /mnt/user/appdata/machinaris/mnemonic.txt) over to this /mnt/user/appdata/machinaris-flora/mnemonic.txt file in place 
-  and restart this container. Finally, don't forget to port-forward tcp/6888 at your router.&#xD;
+  and restart this container. Finally, don't forget to port-forward tcp/18644 at your router.&#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 &#xD;
   Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;</Overview>
   <Category>Crypto: Status:Beta</Category>
@@ -46,18 +46,18 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8928</HostPort>
-        <ContainerPort>8928</ContainerPort>
+        <HostPort>8932</HostPort>
+        <ContainerPort>8932</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>6888</HostPort>
-        <ContainerPort>6888</ContainerPort>
+        <HostPort>18644</HostPort>
+        <ContainerPort>18644</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>6885</HostPort>
-        <ContainerPort>6885</ContainerPort>
+        <HostPort>18647</HostPort>
+        <ContainerPort>18647</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -106,7 +106,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>8928</Value>
+      <Value>8932</Value>
       <Name>worker_api_port</Name>
       <Mode/>
     </Variable>
@@ -119,9 +119,9 @@
   <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="worker_address" Target="worker_address" Default="" Mode="" Description="Again, the IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false">8928</Config>
-  <Config Name="worker_port" Target="8928" Default="8928" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8928 for Flora blockchain." Type="Port" Display="always-hide" Required="true" Mask="false">8928</Config>
-  <Config Name="protocol_port" Target="6888" Default="6888" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">6888</Config>
-  <Config Name="farmer_port" Target="6885" Default="6885" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">6885</Config>
+  <Config Name="worker_port" Target="8932" Default="8932" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8932 for Flora blockchain." Type="Port" Display="always-hide" Required="true" Mask="false">8932</Config>
+  <Config Name="protocol_port" Target="18644" Default="18644" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">18644</Config>
+  <Config Name="farmer_port" Target="18647" Default="18647" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">18647</Config>
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
   <Config Name="blockchains" Target="blockchains" Default="flora" Mode="" Description="The blockchain to farm.  Leave set to 'flora'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">flora</Config>
 </Container>
