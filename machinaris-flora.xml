@@ -24,7 +24,7 @@
   <Category>Crypto: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:8926]/</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris.png</Icon>
+  <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/flora.png</Icon>
   <ExtraParams>-h $HOSTNAME</ExtraParams>
   <PostArgs/>
   <CPUset/>
