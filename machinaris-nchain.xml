@@ -11,17 +11,15 @@
   <Project>https://github.com/guydavis/machinaris</Project>
   <Overview>Adds on farming of the NChain blockchain to the main Machinaris application, alongside Chia. &#xD;
   &#xD;
-  PREREQUISITE: Machinaris application (v0.6.0+), containing Chia blockchain, which this NChain container will register with. &#xD;
+  PREREQUISITE: Machinaris application, containing Chia blockchain, which this NChain container will register with. &#xD;
   &#xD;
-  INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. 
-  Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
+  INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  SETUP: After first-launch of this NChain container, _copy_ your mnemonic pass-phrase (found in your main Machinaris 
-  install at /mnt/user/appdata/machinaris/mnemonic.txt) over to this /mnt/user/appdata/machinaris-nchain/mnemonic.txt file in place 
-  and restart this container. Finally, don't forget to port-forward tcp/6888 at your router.&#xD;
+  SETUP: After first-launch of this NChain container, _copy_ your mnemonic pass-phrase from /mnt/user/appdata/machinaris/mnemonic.txt to /mnt/user/appdata/machinaris-nchain/mnemonic.txt and restart this container. Finally, don't forget to port-forward tcp/58445 at your router.&#xD;
   &#xD;
-  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 &#xD;
-  Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;</Overview>
+  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
+  &#xD;
+  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.</Overview>
   <Category>Crypto: </Category>
   <WebUI>http://[IP]:[PORT:8926]/</WebUI>
   <TemplateURL/>
