@@ -11,11 +11,13 @@
   <Project>https://github.com/guydavis/machinaris</Project>
   <Overview>Adds on farming of the Silicoin blockchain to the main Machinaris application, alongside Chia. &#xD;
   &#xD;
+  NOTE: Silicoin blockchain is currently paused by their dev team.  See: https://www.sitnetwork.org/post/report-what-s-going-on-with-silicoin-mainnet
+  &#xD;
   PREREQUISITE: Machinaris application (v0.6.2+), containing Chia blockchain, which this Silicoin container will register with. &#xD;
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  SETUP: After first-launch of this Silicoin container, _copy_ your mnemonic pass-phrase (found in your main Machinaris install at /mnt/user/appdata/machinaris/mnemonic.txt) over to this /mnt/user/appdata/machinaris-silicoin/mnemonic.txt file in place and restart this container. Finally, don't forget to port-forward tcp/10444 at your router. &#xD;
+  SETUP: After first-launch of this Silicoin container, _copy_ your mnemonic pass-phrase (found in your main Machinaris install at /mnt/user/appdata/machinaris/mnemonic.txt) over to this /mnt/user/appdata/machinaris-silicoin/mnemonic.txt file in place and restart this container. Finally, don't forget to port-forward tcp/11444 at your router. &#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;</Overview>
   &#xD;
@@ -32,11 +34,13 @@
   <DonateLink/>
   <Description>Adds on farming of the Silicoin blockchain to the main Machinaris application, alongside Chia. &#xD;
   &#xD;
+  NOTE: Silicoin blockchain is currently paused by their dev team.  See: https://www.sitnetwork.org/post/report-what-s-going-on-with-silicoin-mainnet
+  &#xD;
   PREREQUISITE: Machinaris application, containing Chia blockchain, which this Silicoin container will register with. &#xD;
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  SETUP: After first-launch of this Silicoin container, _copy_ your mnemonic pass-phrase from /mnt/user/appdata/machinaris/mnemonic.txt to /mnt/user/appdata/machinaris-silicoin/mnemonic.txt and restart this container. Finally, don't forget to port-forward tcp/6888 at your router.&#xD;
+  SETUP: After first-launch of this Silicoin container, _copy_ your mnemonic pass-phrase from /mnt/user/appdata/machinaris/mnemonic.txt to /mnt/user/appdata/machinaris-silicoin/mnemonic.txt and restart this container. Finally, don't forget to port-forward tcp/11444 at your router.&#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
   &#xD;
@@ -45,18 +49,18 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8932</HostPort>
-        <ContainerPort>8932</ContainerPort>
+        <HostPort>8933</HostPort>
+        <ContainerPort>8933</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>18644</HostPort>
-        <ContainerPort>18644</ContainerPort>
+        <HostPort>11444</HostPort>
+        <ContainerPort>11444</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>18647</HostPort>
-        <ContainerPort>18647</ContainerPort>
+        <HostPort>11447</HostPort>
+        <ContainerPort>11447</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -105,7 +109,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>8932</Value>
+      <Value>8933</Value>
       <Name>worker_api_port</Name>
       <Mode/>
     </Variable>
@@ -117,10 +121,10 @@
   <Config Name="plots_dir" Target="plots_dir" Default="/plots1" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots1:/plots2:/plots3" Type="Variable" Display="always-hide" Required="false" Mask="false">/plots1</Config>
   <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="worker_address" Target="worker_address" Default="" Mode="" Description="Again, the IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
-  <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false">8932</Config>
-  <Config Name="worker_port" Target="8932" Default="8932" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8932 for Silicoin blockchain." Type="Port" Display="always-hide" Required="true" Mask="false">8932</Config>
-  <Config Name="protocol_port" Target="18644" Default="18644" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">18644</Config>
-  <Config Name="farmer_port" Target="18647" Default="18647" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">18647</Config>
+  <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false">8933</Config>
+  <Config Name="worker_port" Target="8933" Default="8933" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8933 for Silicoin blockchain." Type="Port" Display="always-hide" Required="true" Mask="false">8933</Config>
+  <Config Name="protocol_port" Target="11444" Default="11444" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">11444</Config>
+  <Config Name="farmer_port" Target="11447" Default="11447" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">11447</Config>
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
   <Config Name="blockchains" Target="blockchains" Default="silicoin" Mode="" Description="The blockchain to farm.  Leave set to 'silicoin'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">silicoin</Config>
 </Container>
