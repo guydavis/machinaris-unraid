@@ -17,7 +17,7 @@
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  SETUP: After first-launch of this Staicoin container, _copy_ your mnemonic pass-phrase (found in your main Machinaris install at /mnt/user/appdata/machinaris/mnemonic.txt) over to this /mnt/user/appdata/machinaris-staicoin/mnemonic.txt file in place and restart this container. Finally, don't forget to port-forward tcp/11444 at your router. &#xD;
+  SETUP: After first-launch of this Staicoin container, _copy_ your mnemonic pass-phrase (found in your main Machinaris install at /mnt/user/appdata/machinaris/mnemonic.txt) over to this /mnt/user/appdata/machinaris-staicoin/mnemonic.txt file in place and restart this container. Finally, don't forget to port-forward tcp/1999 at your router. &#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;</Overview>
   &#xD;
@@ -40,7 +40,7 @@
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  SETUP: After first-launch of this Staicoin container, _copy_ your mnemonic pass-phrase from /mnt/user/appdata/machinaris/mnemonic.txt to /mnt/user/appdata/machinaris-staicoin/mnemonic.txt and restart this container. Finally, don't forget to port-forward tcp/11444 at your router.&#xD;
+  SETUP: After first-launch of this Staicoin container, _copy_ your mnemonic pass-phrase from /mnt/user/appdata/machinaris/mnemonic.txt to /mnt/user/appdata/machinaris-staicoin/mnemonic.txt and restart this container. Finally, don't forget to port-forward tcp/1999 at your router.&#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
   &#xD;
@@ -49,18 +49,18 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8933</HostPort>
-        <ContainerPort>8933</ContainerPort>
+        <HostPort>8934</HostPort>
+        <ContainerPort>8934</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>11444</HostPort>
-        <ContainerPort>11444</ContainerPort>
+        <HostPort>1999</HostPort>
+        <ContainerPort>1999</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>11447</HostPort>
-        <ContainerPort>11447</ContainerPort>
+        <HostPort>1692</HostPort>
+        <ContainerPort>1692</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -109,7 +109,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>8933</Value>
+      <Value>8934</Value>
       <Name>worker_api_port</Name>
       <Mode/>
     </Variable>
@@ -121,10 +121,10 @@
   <Config Name="plots_dir" Target="plots_dir" Default="/plots1" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots1:/plots2:/plots3" Type="Variable" Display="always-hide" Required="false" Mask="false">/plots1</Config>
   <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="worker_address" Target="worker_address" Default="" Mode="" Description="Again, the IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
-  <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false">8933</Config>
-  <Config Name="worker_port" Target="8933" Default="8933" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8933 for Staicoin blockchain." Type="Port" Display="always-hide" Required="true" Mask="false">8933</Config>
-  <Config Name="protocol_port" Target="11444" Default="11444" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">11444</Config>
-  <Config Name="farmer_port" Target="11447" Default="11447" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">11447</Config>
+  <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false">8934</Config>
+  <Config Name="worker_port" Target="8934" Default="8934" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8934 for Staicoin blockchain." Type="Port" Display="always-hide" Required="true" Mask="false">8934</Config>
+  <Config Name="protocol_port" Target="1999" Default="1999" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">1999</Config>
+  <Config Name="farmer_port" Target="1692" Default="1692" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">1692</Config>
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
   <Config Name="blockchains" Target="blockchains" Default="staicoin" Mode="" Description="The blockchain to farm.  Leave set to 'staicoin'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">staicoin</Config>
 </Container>
