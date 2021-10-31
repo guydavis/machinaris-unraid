@@ -11,6 +11,8 @@
   <Project>https://github.com/guydavis/machinaris</Project>
   <Overview>Adds on farming of the Silicoin blockchain to the main Machinaris application, alongside Chia. &#xD;
   &#xD;
+  NOTE: Silicoin blockchain is currently paused by their dev team.  See: https://www.sitnetwork.org/post/report-what-s-going-on-with-staicoin-mainnet
+  &#xD;
   PREREQUISITE: Machinaris application, containing Chia blockchain, which this Silicoin container will register with. &#xD;
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
@@ -31,6 +33,8 @@
   <DonateText/>
   <DonateLink/>
   <Description>Adds on farming of the Silicoin blockchain to the main Machinaris application, alongside Chia. &#xD;
+  &#xD;
+  NOTE: Silicoin blockchain is currently paused by their dev team.  See: https://www.sitnetwork.org/post/report-what-s-going-on-with-staicoin-mainnet
   &#xD;
   PREREQUISITE: Machinaris application, containing Chia blockchain, which this Silicoin container will register with. &#xD;
   &#xD;
