@@ -15,7 +15,7 @@
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  SETUP: After first-launch of this HDDCoin container, _copy_ your mnemonic pass-phrase from /mnt/user/appdata/machinaris/mnemonic.txt to /mnt/user/appdata/machinaris-hddcoin/mnemonic.txt and restart this container. Finally, don't forget to port-forward tcp/28444 at your router. &#xD;
+  SETUP: The HDDCoin blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/28444 at your router. &#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
   &#xD;
@@ -36,7 +36,7 @@
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  SETUP: After first-launch of this HDDCoin container, _copy_ your mnemonic pass-phrase from /mnt/user/appdata/machinaris/mnemonic.txt to /mnt/user/appdata/machinaris-hddcoin/mnemonic.txt and restart this container. Finally, don't forget to port-forward tcp/28444 at your router. &#xD;
+  SETUP: The HDDCoin blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/28444 at your router. &#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
   &#xD;
@@ -77,6 +77,11 @@
       <ContainerDir>/plotting</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/machinaris/mnemonic.txt</HostDir>
+      <ContainerDir>/root/.chia/mnemonic.txt</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
   </Data>
   <Environment>
     <Variable>
@@ -112,6 +117,7 @@
   </Environment>
   <Labels/>
   <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris-hddcoin" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot storage." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris-hddcoin</Config>
+  <Config Name="mnemonic_path" Target="/root/.chia/mnemonic.txt" Default="/mnt/user/appdata/machinaris/mnemonic.txt" Mode="ro" Description="Read-only access to the mnemonic from the main Machinaris container, allowing this fork to farm the same plots." Type="Path" Display="advanced-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris/mnemonic.txt</Config>
   <Config Name="plots1" Target="/plots1" Default="" Mode="rw" Description="Holds completed plots for farming. Create more Paths for additional folders like plots1,plots2,etc... " Type="Path" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="plotting" Target="/plotting" Default="" Mode="rw" Description="Your fast temp space for plotting, ideally a cache pool or unassigned SSD." Type="Path" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="plots_dir" Target="plots_dir" Default="/plots1" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots1:/plots2:/plots3" Type="Variable" Display="always-hide" Required="false" Mask="false">/plots1</Config>
