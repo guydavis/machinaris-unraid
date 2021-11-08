@@ -55,8 +55,8 @@
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>TODO</HostPort>
-        <ContainerPort>TODO</ContainerPort>
+        <HostPort>8337</HostPort>
+        <ContainerPort>8337</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -126,7 +126,7 @@
   <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false">8935</Config>
   <Config Name="worker_port" Target="8935" Default="8935" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8935 for Stor blockchain." Type="Port" Display="always-hide" Required="true" Mask="false">8935</Config>
   <Config Name="protocol_port" Target="8668" Default="8668" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">8668</Config>
-  <Config Name="farmer_port" Target="TODO" Default="TODO" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">TODO</Config>
+  <Config Name="farmer_port" Target="8337" Default="8337" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">8337</Config>
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
   <Config Name="blockchains" Target="blockchains" Default="stor" Mode="" Description="The blockchain to farm.  Leave set to 'stor'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">stor</Config>
 </Container>
