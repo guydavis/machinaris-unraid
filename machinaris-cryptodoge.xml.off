@@ -1,44 +1,42 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>machinaris-cactus</Name>
-  <Repository>ghcr.io/guydavis/machinaris-cactus</Repository>
-  <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-cactus</Registry>
+  <Name>machinaris-cryptodoge</Name>
+  <Repository>ghcr.io/guydavis/machinaris-cryptodoge</Repository>
+  <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-cryptodoge</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/108896-support-machinaris-chia-crptocurrency-farming-plotman-plotting-unraid-webui/</Support>
   <Project>https://github.com/guydavis/machinaris</Project>
-  <Overview>Adds on farming of the Cactus blockchain to the main Machinaris application, alongside Chia. &#xD;
+  <Overview>Adds on farming of the Cryptodoge blockchain to the main Machinaris application, alongside Chia. &#xD;
   &#xD;
-  PREREQUISITE: Machinaris application, containing Chia blockchain, which this Cactus container will register with. &#xD;
+  PREREQUISITE: Machinaris application, containing Chia blockchain, which this Cryptodoge container will register with. &#xD;
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  SETUP: The Cactus blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/11444 at your router.&#xD;
+  SETUP: The Cryptodoge blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/15994 at your router.&#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
   &#xD;
   DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.</Overview>
   <Category>Crypto: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:8926]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-cactus.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/cactus.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-cryptodoge.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/cryptodoge.png</Icon>
   <ExtraParams>-h $HOSTNAME</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled></DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>Adds on farming of the Cactus blockchain to the main Machinaris application, alongside Chia. &#xD;
+  <Description>Adds on farming of the Cryptodoge blockchain to the main Machinaris application, alongside Chia. &#xD;
   &#xD;
-  NOTE: Cactus blockchain is currently paused by their dev team.  See: https://www.sitnetwork.org/post/report-what-s-going-on-with-cactus-mainnet
+  PREREQUISITE: Machinaris application, containing Chia blockchain, which this Cryptodoge container will register with. &#xD;
   &#xD;
-  PREREQUISITE: Machinaris application, containing Chia blockchain, which this Cactus container will register with. &#xD;
+  INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  INSTALL: Set the host path to first directory containing plots using '/plots' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
-  &#xD;
-  SETUP: The Cactus blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/6888 at your router.&#xD;
+  SETUP: The Cryptodoge blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/15994 at your router.&#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
   &#xD;
@@ -47,25 +45,25 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8936</HostPort>
-        <ContainerPort>8936</ContainerPort>
+        <HostPort>8937</HostPort>
+        <ContainerPort>8937</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>11444</HostPort>
-        <ContainerPort>11444</ContainerPort>
+        <HostPort>15994</HostPort>
+        <ContainerPort>15994</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>11447</HostPort>
-        <ContainerPort>11447</ContainerPort>
+        <HostPort>16895</HostPort>
+        <ContainerPort>16895</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/machinaris-cactus</HostDir>
+      <HostDir>/mnt/user/appdata/machinaris-cryptodoge</HostDir>
       <ContainerDir>/root/.chia</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -97,7 +95,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>cactus</Value>
+      <Value>cryptodoge</Value>
       <Name>blockchains</Name>
       <Mode/>
     </Variable>
@@ -112,23 +110,23 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>8936</Value>
+      <Value>8937</Value>
       <Name>worker_api_port</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris-cactus" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot storage." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris-cactus</Config>
+  <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris-cryptodoge" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot cryptodogeage." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris-cryptodoge</Config>
   <Config Name="mnemonic_path" Target="/root/.chia/mnemonic.txt" Default="/mnt/user/appdata/machinaris/mnemonic.txt" Mode="ro" Description="Read-only access to the mnemonic from the main Machinaris container, allowing this fork to farm the same plots." Type="Path" Display="advanced-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris/mnemonic.txt</Config>
   <Config Name="plots1" Target="/plots1" Default="" Mode="rw" Description="Holds completed plots for farming. Create more Paths for additional folders like plots1,plots2,etc... " Type="Path" Display="always-hide" Required="false" Mask="false"></Config>
-  <Config Name="plotting" Target="/plotting" Default="" Mode="rw" Description="Your fast temp space for plotting, ideally a cache pool or unassigned SSD." Type="Path" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="plotting" Target="/plotting" Default="" Mode="rw" Description="Your fast temp space for plotting, ideally a cache pool or unassigned SSD." Type="Path" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="plots_dir" Target="plots_dir" Default="/plots1" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots1:/plots2:/plots3" Type="Variable" Display="always-hide" Required="false" Mask="false">/plots1</Config>
   <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="worker_address" Target="worker_address" Default="" Mode="" Description="Again, the IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
-  <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="advanced-hide" Required="true" Mask="false">8936</Config>
-  <Config Name="worker_port" Target="8936" Default="8936" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8936 for Cactus blockchain." Type="Port" Display="advanced-hide" Required="true" Mask="false">8936</Config>
-  <Config Name="protocol_port" Target="11444" Default="11444" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="advanced-hide" Required="true" Mask="false">11444</Config>
-  <Config Name="farmer_port" Target="11447" Default="11447" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="advanced-hide" Required="true" Mask="false">11447</Config>
+  <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false">8937</Config>
+  <Config Name="worker_port" Target="8937" Default="8937" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8937 for Cryptodoge blockchain." Type="Port" Display="always-hide" Required="true" Mask="false">8937</Config>
+  <Config Name="protocol_port" Target="15994" Default="15994" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">15994</Config>
+  <Config Name="farmer_port" Target="16895" Default="16895" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">16895</Config>
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
-  <Config Name="blockchains" Target="blockchains" Default="cactus" Mode="" Description="The blockchain to farm.  Leave set to 'cactus'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">cactus</Config>
+  <Config Name="blockchains" Target="blockchains" Default="cryptodoge" Mode="" Description="The blockchain to farm.  Leave set to 'cryptodoge'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">cryptodoge</Config>
 </Container>
