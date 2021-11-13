@@ -114,6 +114,11 @@
       <Name>worker_api_port</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>blockchain_db_download</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris-flora" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot storage." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris-flora</Config>
@@ -129,4 +134,5 @@
   <Config Name="farmer_port" Target="18647" Default="18647" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">18647</Config>
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
   <Config Name="blockchains" Target="blockchains" Default="flora" Mode="" Description="The blockchain to farm.  Leave set to 'flora'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">flora</Config>
+  <Config Name="blockchain_db_download" Target="blockchain_db_download" Default="false" Mode="" Description="On first launch, whether to download a fully synced copy of the blockchain database, avoidng hours/days of syncing.  Off by default due to inherent risks.  More at: https://github.com/guydavis/machinaris/wiki/Blockchains" Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
 </Container>

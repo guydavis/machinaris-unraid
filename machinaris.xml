@@ -97,6 +97,11 @@
       <Name>blockchains</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>blockchain_db_download</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot storage." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris</Config>
@@ -112,4 +117,5 @@
   <Config Name="auto_plot" Target="AUTO_PLOT" Default="false" Mode="" Description="When true, a Plotman plotting loop will be immediately launched on start of the container, applying your plotman.yaml settings." Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
   <Config Name="plots_dir" Target="plots_dir" Default="/plots1" Mode="" Description="A colon-separated list of all in-container folders holding your completed plots." Type="Variable" Display="always-hide" Required="false" Mask="false">/plots1</Config>
   <Config Name="blockchains" Target="blockchains" Default="chia" Mode="" Description="The blockchain to farm.  Leave set to 'chia'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">chia</Config>
+  <Config Name="blockchain_db_download" Target="blockchain_db_download" Default="false" Mode="" Description="On first launch, whether to download a fully synced copy of the blockchain database, avoidng hours/days of syncing.  Off by default due to inherent risks.  More at: https://github.com/guydavis/machinaris/wiki/Blockchains" Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
 </Container>
