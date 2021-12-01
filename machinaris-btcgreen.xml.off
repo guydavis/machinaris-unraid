@@ -55,8 +55,8 @@
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>9285</HostPort>
-        <ContainerPort>9285</ContainerPort>
+        <HostPort>18655</HostPort>
+        <ContainerPort>18655</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -131,7 +131,7 @@
   <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false">8938</Config>
   <Config Name="worker_port" Target="8938" Default="8938" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8938 for BTCGreen blockchain." Type="Port" Display="always-hide" Required="true" Mask="false">8938</Config>
   <Config Name="protocol_port" Target="9282" Default="9282" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">9282</Config>
-  <Config Name="farmer_port" Target="9285" Default="9285" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">9285</Config>
+  <Config Name="farmer_port" Target="18655" Default="18655" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">18655</Config>
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
   <Config Name="blockchains" Target="blockchains" Default="btcgreen" Mode="" Description="The blockchain to farm.  Leave set to 'btcgreen'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">btcgreen</Config>
   <Config Name="blockchain_db_download" Target="blockchain_db_download" Default="false" Mode="" Description="On first launch, whether to download a fully synced copy of the blockchain database, avoidng hours/days of syncing.  Off by default due to inherent risks.  More at: https://github.com/guydavis/machinaris/wiki/Blockchains" Type="Variable" Display="always-hide" Required="false" Mask="false">false</Config>
