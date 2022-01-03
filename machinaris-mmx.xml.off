@@ -15,7 +15,7 @@
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  SETUP: The MMX blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/12332 at your router.&#xD;
+  SETUP: The MMX blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/12333 at your router.&#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
   &#xD;
@@ -36,7 +36,7 @@
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  SETUP: The MMX blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/12332 at your router.&#xD;
+  SETUP: The MMX blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/12333 at your router.&#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
   &#xD;
@@ -50,8 +50,8 @@
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>12332</HostPort>
-        <ContainerPort>12332</ContainerPort>
+        <HostPort>12333</HostPort>
+        <ContainerPort>12333</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -125,7 +125,7 @@
   <Config Name="worker_address" Target="worker_address" Default="" Mode="" Description="Again, the IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false">8940</Config>
   <Config Name="worker_port" Target="8940" Default="8940" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8940 for MMX blockchain." Type="Port" Display="always-hide" Required="true" Mask="false">8940</Config>
-  <Config Name="protocol_port" Target="12332" Default="12332" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">12332</Config>
+  <Config Name="protocol_port" Target="12333" Default="12333" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">12333</Config>
   <!--Config Name="farmer_port" Target="18974" Default="18974" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">18974</Config-->
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
   <Config Name="blockchains" Target="blockchains" Default="mmx" Mode="" Description="The blockchain to farm.  Leave set to 'mmx'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">mmx</Config>
