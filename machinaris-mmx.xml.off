@@ -65,17 +65,17 @@
     <Volume>
       <HostDir>/mnt/user/appdata/machinaris-mmx</HostDir>
       <ContainerDir>/root/.chia</ContainerDir>
-      <Mode>rw</Mode>
+      <Mode>rw,slave</Mode>
     </Volume>
     <Volume>
       <HostDir></HostDir>
       <ContainerDir>/plots1</ContainerDir>
-      <Mode>rw</Mode>
+      <Mode>rw,slave</Mode>
     </Volume>
     <Volume>
       <HostDir></HostDir>
       <ContainerDir>/plotting</ContainerDir>
-      <Mode>rw</Mode>
+      <Mode>rw,slave</Mode>
     </Volume>
   </Data>
   <Environment>
