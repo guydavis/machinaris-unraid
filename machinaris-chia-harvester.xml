@@ -13,6 +13,8 @@
   &#xD;
   PREREQUISITE: On another machine! Install the Machinaris application, providing the Chia fullnode, which this harvester container will connect with.&#xD;
   &#xD;
+  WARNING: Do NOT install this harvester on the same system as you installed the fullnode.  The fullnode already runs a harvester internally.  This harvester software is for a second physical server.&#xD;
+  &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
   SETUP: Control of this harvester will be available within the Machinaris WebUI.&#xD;
@@ -32,7 +34,9 @@
   <DonateLink/>
   <Description>On a secondary Unraid system, allows for harvesting of local Chia plots.  Connects to the main Machinaris application.&#xD;
   &#xD;
-  PREREQUISITE: On another machine! Install the Machinaris application, providing the Chia fullnode, which this harvester container will connect with.&#xD;
+  PREREQUISITE: On another machine, first install the Machinaris application, providing the Chia fullnode, which this harvester container will connect with.&#xD;
+  &#xD;
+  WARNING: Do NOT install this harvester on the same system as you installed the fullnode.  The fullnode already runs a harvester internally.  This harvester software is for a second physical server.&#xD;
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
@@ -106,9 +110,9 @@
   <Config Name="plots_dir" Target="plots_dir" Default="/plots1" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots1:/plots2:/plots3" Type="Variable" Display="always-hide" Required="false" Mask="false">/plots1</Config>
   <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of the Machinaris Controller on your LAN for controller/worker communication. ANOTHER COMPUTER" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="worker_address" Target="worker_address" Default="" Mode="" Description="Again, the IP address of this Unraid server on your LAN for controller/worker communication. THIS COMPUTER" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
-  <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false">8927</Config>
+  <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="advanced-hide" Required="true" Mask="false">8927</Config>
   <Config Name="web_port" Target="8926" Default="8926" Mode="tcp" Description="Machinaris local web app port." Type="Port" Display="advanced-hide" Required="false" Mask="false">8926</Config>
-  <Config Name="worker_port" Target="8927" Default="8927" Mode="tcp" Description="Leave at 8927 for Chia" Type="Port" Display="always-hide" Required="true" Mask="false">8927</Config>
+  <Config Name="worker_port" Target="8927" Default="8927" Mode="tcp" Description="Leave at 8927 for Chia" Type="Port" Display="advanced-hide" Required="true" Mask="false">8927</Config>
   <Config Name="mode" Target="mode" Default="harvester" Mode="" Description="Default is 'harvester'.  If plotting as well, use 'harvester,plotter'" Type="Variable" Display="advanced-hide" Required="true" Mask="false">harvester</Config>
   <Config Name="blockchains" Target="blockchains" Default="chia" Mode="" Description="Leave at 'chia'.  Only one, not multple." Type="Variable" Display="advanced-hide" Required="false" Mask="false">chia</Config>
 </Container>
