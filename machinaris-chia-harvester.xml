@@ -110,7 +110,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris-harvester" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot harvesterage." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris-harvester</Config>
+  <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot storage." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris</Config>
   <Config Name="plots1" Target="/plots1" Default="" Mode="rw" Description="Holds completed plots for farming. Create more Paths for additional folders like plots1,plots2,etc... " Type="Path" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="plots_dir" Target="plots_dir" Default="/plots1" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots1:/plots2:/plots3" Type="Variable" Display="always-hide" Required="false" Mask="false">/plots1</Config>
   <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of the Machinaris Controller on your LAN for controller/worker communication. ANOTHER COMPUTER" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
