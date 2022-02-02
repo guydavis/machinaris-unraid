@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>machinaris-mmx</Name>
-  <Repository>ghcr.io/guydavis/machinaris-mmx:develop</Repository>
+  <Repository>ghcr.io/guydavis/machinaris-mmx</Repository>
   <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-mmx</Registry>
   <Network>bridge</Network>
   <MyIP/>
