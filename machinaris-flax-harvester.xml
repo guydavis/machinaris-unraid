@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>machinaris-flax-harvester</Name>
-  <Repository>ghcr.io/guydavis/machinaris-flax-harvester</Repository>
+  <Repository>ghcr.io/guydavis/machinaris-flax</Repository>
   <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-flax-harvester</Registry>
   <Network>bridge</Network>
   <MyIP/>

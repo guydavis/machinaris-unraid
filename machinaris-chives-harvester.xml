@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>machinaris-chives-harvester</Name>
-  <Repository>ghcr.io/guydavis/machinaris-chives-harvester</Repository>
+  <Repository>ghcr.io/guydavis/machinaris-chives</Repository>
   <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-chives-harvester</Registry>
   <Network>bridge</Network>
   <MyIP/>

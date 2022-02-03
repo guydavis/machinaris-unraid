@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>machinaris-cryptodoge-harvester</Name>
-  <Repository>ghcr.io/guydavis/machinaris-cryptodoge-harvester</Repository>
+  <Repository>ghcr.io/guydavis/machinaris-cryptodoge</Repository>
   <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-cryptodoge-harvester</Registry>
   <Network>bridge</Network>
   <MyIP/>

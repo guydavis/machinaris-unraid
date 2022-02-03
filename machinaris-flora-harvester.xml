@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>machinaris-flora-harvester</Name>
-  <Repository>ghcr.io/guydavis/machinaris-flora-harvester</Repository>
+  <Repository>ghcr.io/guydavis/machinaris-flora</Repository>
   <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-flora-harvester</Registry>
   <Network>bridge</Network>
   <MyIP/>

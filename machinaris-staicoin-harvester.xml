@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>machinaris-staicoin-harvester</Name>
-  <Repository>ghcr.io/guydavis/machinaris-staicoin-harvester</Repository>
+  <Repository>ghcr.io/guydavis/machinaris-staicoin</Repository>
   <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-staicoin-harvester</Registry>
   <Network>bridge</Network>
   <MyIP/>
