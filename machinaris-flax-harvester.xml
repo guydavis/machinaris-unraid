@@ -94,7 +94,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>6888</Value>
+      <Value>6885</Value>
       <Name>farmer_port</Name>
       <Mode/>
     </Variable>
@@ -115,7 +115,7 @@
   <Config Name="plots_dir" Target="plots_dir" Default="/plots1" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots1:/plots2:/plots3" Type="Variable" Display="always-hide" Required="false" Mask="false">/plots1</Config>
   <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of the Machinaris Controller on your LAN for controller/worker communication. ANOTHER COMPUTER" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="farmer_address" Target="farmer_address" Default="" Mode="" Description="The IP address of the Flax fullnode farmer this harvester will connect to. ANOTHER COMPUTER" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
-  <Config Name="farmer_port" Target="farmer_port" Default="6888" Mode="" Description="The port of the Flax fullnode farmer this harvester will connect to." Type="Variable" Display="advanced-hide" Required="true" Mask="false">6888</Config>
+  <Config Name="farmer_port" Target="farmer_port" Default="6885" Mode="" Description="The port of the Flax fullnode farmer this harvester will connect to." Type="Variable" Display="advanced-hide" Required="true" Mask="false">6885</Config>
   <Config Name="worker_address" Target="worker_address" Default="" Mode="" Description="The IP address of this Unraid server on your LAN for controller/worker communication. THIS COMPUTER" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="advanced-hide" Required="true" Mask="false">8928</Config>
   <Config Name="worker_port" Target="8928" Default="8928" Mode="tcp" Description="Leave at 8928 for Flax" Type="Port" Display="advanced-hide" Required="true" Mask="false">8928</Config>
