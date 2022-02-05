@@ -15,7 +15,7 @@
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  SETUP: The MMX blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/12334 at your router.&#xD;
+  SETUP: The MMX blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/12334 at your router. A GPU is recommended, but not required.  See: https://github.com/guydavis/machinaris/wiki/MMX#can-i-use-my-gpu&#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
   &#xD;
@@ -36,7 +36,7 @@
   &#xD;
   INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host and worker_address variables. &#xD;  
   &#xD;
-  SETUP: The MMX blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/12334 at your router.&#xD;
+  SETUP: The MMX blockchain will be accessible within the Machinaris WebUI.  Don't forget to port-forward tcp/12334 at your router. A GPU is recommended, but not required.  See: https://github.com/guydavis/machinaris/wiki/MMX#can-i-use-my-gpu&#xD;
   &#xD;
   SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
   &#xD;
