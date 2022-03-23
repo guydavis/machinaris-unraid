@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/108896-support-machinaris-chia-crptocurrency-farming-plotman-plotting-unraid-webui/</Support>
   <Project>https://github.com/guydavis/machinaris</Project>
-  <Overview>On a secondary Unraid system, allows for harvesting of local MMX (NOT CHIA) plots.  Connects to the main Machinaris application.&#xD;
+  <Overview>On a secondary Unraid system, allows for harvesting of local MMX (NOT CHIA) plots.  Connects to the main Machinaris application. x86_64 required, MMX does not support aarch64.&#xD;
   &#xD;
   PREREQUISITE: On another machine! Install the Machinaris applicatione, which this harvester container will connect with.&#xD;
   &#xD;
@@ -32,7 +32,7 @@
   <DateInstalled></DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>On a secondary Unraid system, allows for harvesting of local MMX (NOT CHIA) plots to the MMX blockchain.  Connects to the main Machinaris controller and the MMX fullnode.&#xD;
+  <Description>On a secondary Unraid system, allows for harvesting of local MMX (NOT CHIA) plots to the MMX blockchain.  Connects to the main Machinaris controller and the MMX fullnode. x86_64 required, MMX does not support aarch64.&#xD;
   &#xD;
   PREREQUISITE: On another machine, first install the Machinaris application as your controller.  Also on that machine, install the Machinaris MMX fullnode which this harvester container will connect with.&#xD;
   &#xD;
