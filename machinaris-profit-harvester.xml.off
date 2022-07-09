@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>machinaris-profit-harvester</Name>
+  <Repository>ghcr.io/guydavis/machinaris-profit</Repository>
+  <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-profit-harvester</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/108896-support-machinaris-chia-crptocurrency-farming-plotman-plotting-unraid-webui/</Support>
+  <Project>https://github.com/guydavis/machinaris</Project>
+  <Overview>On a secondary Unraid system, allows for harvesting of local Chia plots.  Connects to the main Machinaris application.&#xD;
+  &#xD;
+  PREREQUISITE: On another machine! Install the Machinaris applicatione, which this harvester container will connect with.&#xD;
+  &#xD;
+  WARNING: Do NOT install this harvester on the same system as you installed the fullnode.  The fullnode already runs a harvester internally.  This harvester software is for a second physical server.&#xD;
+  &#xD;
+  INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host, farmer_address  and worker_address variables.&#xD;
+  &#xD;
+  SETUP: Control of this harvester will be available within the Machinaris WebUI.&#xD;
+  &#xD;
+  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
+  &#xD;
+  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.</Overview>
+  <Category>Crypto: Status:Beta</Category>
+  <WebUI>http://[IP]:[PORT:8926]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-profit-harvester.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/profit.png</Icon>
+  <ExtraParams>-h $HOSTNAME</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>On a secondary Unraid system, allows for harvesting of local Chia plots to the Profit blockchain.  Connects to the main Machinaris controller and the Profit fullnode.&#xD;
+  &#xD;
+  PREREQUISITE: On another machine, first install the Machinaris application as your controller.  Also on that machine, install the Machinaris Profit fullnode which this harvester container will connect with.&#xD;
+  &#xD;
+  WARNING: Do NOT install this harvester on the same system as you installed the fullnode.  The fullnode already runs a harvester internally.  This harvester software is for a second physical server.&#xD;
+  &#xD;
+  INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host, farmer_address and worker_address variables.&#xD;
+  &#xD;
+  SETUP: Control of this harvester will be available within the Machinaris WebUI.&#xD;
+  &#xD;
+  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
+  &#xD;
+  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8944</HostPort>
+        <ContainerPort>8944</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/machinaris-profit</HostDir>
+      <ContainerDir>/root/.chia</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/plots1</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>/plots1</Value>
+      <Name>plots_dir</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>harvester</Value>
+      <Name>mode</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>profit</Value>
+      <Name>blockchains</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>controller_host</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>farmer_address</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>48447</Value>
+      <Name>farmer_port</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>worker_address</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>8944</Value>
+      <Name>worker_api_port</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris-profit" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot storage." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris-profit</Config>
+  <Config Name="plots1" Target="/plots1" Default="" Mode="rw" Description="Holds completed plots for farming. Create more Paths for additional folders like plots1,plots2,etc... " Type="Path" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="plots_dir" Target="plots_dir" Default="/plots1" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots1:/plots2:/plots3" Type="Variable" Display="always-hide" Required="false" Mask="false">/plots1</Config>
+  <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of the Machinaris Controller on your LAN for controller/worker communication. ANOTHER COMPUTER" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="farmer_address" Target="farmer_address" Default="" Mode="" Description="The IP address of the Profit fullnode farmer this harvester will connect to. ANOTHER COMPUTER" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="farmer_port" Target="farmer_port" Default="48447" Mode="" Description="The port of the Profit fullnode farmer this harvester will connect to." Type="Variable" Display="advanced-hide" Required="true" Mask="false">48447</Config>
+  <Config Name="worker_address" Target="worker_address" Default="" Mode="" Description="The IP address of this Unraid server on your LAN for controller/worker communication. THIS COMPUTER" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="advanced-hide" Required="true" Mask="false">8944</Config>
+  <Config Name="worker_port" Target="8944" Default="8944" Mode="tcp" Description="Leave at 8944 for Profit" Type="Port" Display="advanced-hide" Required="true" Mask="false">8944</Config>
+  <Config Name="mode" Target="mode" Default="harvester" Mode="" Description="Default is 'harvester'.  If plotting as well, use 'harvester,plotter' and add a '/plotting' Path mount." Type="Variable" Display="advanced-hide" Required="true" Mask="false">harvester</Config>
+  <Config Name="blockchains" Target="blockchains" Default="profit" Mode="" Description="Leave at 'profit'.  Only one, not multple." Type="Variable" Display="advanced-hide" Required="false" Mask="false">profit</Config>
+</Container>
