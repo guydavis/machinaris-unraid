@@ -45,8 +45,8 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8945</HostPort>
-        <ContainerPort>8945</ContainerPort>
+        <HostPort>8944</HostPort>
+        <ContainerPort>8944</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
@@ -110,7 +110,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>8945</Value>
+      <Value>8944</Value>
       <Name>worker_api_port</Name>
       <Mode/>
     </Variable>
@@ -128,8 +128,8 @@
   <Config Name="plots_dir" Target="plots_dir" Default="/plots1" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots1:/plots2:/plots3" Type="Variable" Display="always-hide" Required="false" Mask="false">/plots1</Config>
   <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="worker_address" Target="worker_address" Default="" Mode="" Description="Again, the IP address of your Unraid server on your LAN for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
-  <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false">8945</Config>
-  <Config Name="worker_port" Target="8945" Default="8945" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8945 for Profit blockchain." Type="Port" Display="always-hide" Required="true" Mask="false">8945</Config>
+  <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="always-hide" Required="true" Mask="false">8944</Config>
+  <Config Name="worker_port" Target="8944" Default="8944" Mode="tcp" Description="The TCP port to reach this worker at.  Leave at 8944 for Profit blockchain." Type="Port" Display="always-hide" Required="true" Mask="false">8944</Config>
   <Config Name="protocol_port" Target="48444" Default="48444" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">48444</Config>
   <Config Name="farmer_port" Target="48447" Default="48447" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">48447</Config>
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
