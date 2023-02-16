@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>machinaris-mmx-harvester</Name>
-  <Repository>ghcr.io/guydavis/machinaris-mmx</Repository>
-  <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-mmx-harvester</Registry>
+  <Name>machinaris-gigahorse-harvester</Name>
+  <Repository>ghcr.io/guydavis/machinaris-gigahorse</Repository>
+  <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-gigahorse-harvester</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -24,8 +24,8 @@
   DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.</Overview>
   <Category>Crypto: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:8926]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-mmx-harvester.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/mmx.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-gigahorse-harvester.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/gigahorse.png</Icon>
   <ExtraParams>-h $HOSTNAME</ExtraParams>
   <PostArgs/>
   <CPUset/>
@@ -57,7 +57,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/machinaris-mmx</HostDir>
+      <HostDir>/mnt/user/appdata/machinaris-gigahorse</HostDir>
       <ContainerDir>/root/.chia</ContainerDir>
       <Mode>rw,slave</Mode>
     </Volume>
@@ -79,7 +79,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>mmx</Value>
+      <Value>gigahorse</Value>
       <Name>blockchains</Name>
       <Mode/>
     </Variable>
@@ -110,8 +110,8 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris-mmx" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot storage." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris-mmx</Config>
-  <Config Name="plots1" Target="/plots1" Default="" Mode="rw" Description="Holds completed Gigahorse plots for farming. Recommend a 'mmx' sub-folder within your Chia plots folder! Create more Paths for additional folders like plots1,plots2,etc... " Type="Path" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris-gigahorse" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot storage." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris-gigahorse</Config>
+  <Config Name="plots1" Target="/plots1" Default="" Mode="rw" Description="Holds completed Gigahorse plots for farming. Recommend a 'gigahorse' sub-folder within your Chia plots folder! Create more Paths for additional folders like plots1,plots2,etc... " Type="Path" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="plots_dir" Target="plots_dir" Default="/plots1" Mode="" Description="A colon-separated list of all in-container paths (defined above) holding your completed plots.  Example: /plots1:/plots2:/plots3" Type="Variable" Display="always-hide" Required="false" Mask="false">/plots1</Config>
   <Config Name="controller_host" Target="controller_host" Default="" Mode="" Description="The IP address of the Machinaris Controller on your LAN for controller/worker communication. ANOTHER COMPUTER" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="farmer_address" Target="farmer_address" Default="" Mode="" Description="The IP address of the Gigahorse fullnode farmer this harvester will connect to. ANOTHER COMPUTER" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
@@ -120,5 +120,5 @@
   <Config Name="worker_api_port" Target="worker_api_port" Default="" Mode="" Description="The TCP port of the Machinaris worker for controller/worker communication." Type="Variable" Display="advanced-hide" Required="true" Mask="false">8959</Config>
   <Config Name="worker_port" Target="8959" Default="8959" Mode="tcp" Description="Leave at 8959 for Gigahorse" Type="Port" Display="advanced-hide" Required="true" Mask="false">8959</Config>
   <Config Name="mode" Target="mode" Default="harvester" Mode="" Description="Default is 'harvester'.  If plotting as well, use 'harvester,plotter' and add a '/plotting' Path mount." Type="Variable" Display="advanced-hide" Required="true" Mask="false">harvester</Config>
-  <Config Name="blockchains" Target="blockchains" Default="mmx" Mode="" Description="Leave at 'mmx'.  Only one, not multple." Type="Variable" Display="advanced-hide" Required="false" Mask="false">mmx</Config>
+  <Config Name="blockchains" Target="blockchains" Default="gigahorse" Mode="" Description="Leave at 'gigahorse'.  Only one, not multple." Type="Variable" Display="advanced-hide" Required="false" Mask="false">gigahorse</Config>
 </Container>
