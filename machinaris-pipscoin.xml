@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>machinaris-ballcoin</Name>
-  <Repository>ghcr.io/guydavis/machinaris-ballcoin</Repository>
-  <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-ballcoin</Registry>
+  <Name>machinaris-pipscoin</Name>
+  <Repository>ghcr.io/guydavis/machinaris-pipscoin</Repository>
+  <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris-pipscoin</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -22,8 +22,8 @@
   DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.</Overview>
   <Category>Crypto: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:8926]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-ballcoin.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/ballcoin.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-pipscoin.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/logos/pipscoin.png</Icon>
   <ExtraParams>-h $HOSTNAME</ExtraParams>
   <PostArgs/>
   <CPUset/>
@@ -63,7 +63,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/machinaris-ballcoin</HostDir>
+      <HostDir>/mnt/user/appdata/machinaris-pipscoin</HostDir>
       <ContainerDir>/root/.chia</ContainerDir>
       <Mode>rw,slave</Mode>
     </Volume>
@@ -95,7 +95,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>ballcoin</Value>
+      <Value>pipscoin</Value>
       <Name>blockchains</Name>
       <Mode/>
     </Variable>
@@ -121,7 +121,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris-ballcoin" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot ballcoinage." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris-ballcoin</Config>
+  <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris-pipscoin" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot ballcoinage." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris-pipscoin</Config>
   <Config Name="mnemonic_path" Target="/root/.chia/mnemonic.txt" Default="/mnt/user/appdata/machinaris/mnemonic.txt" Mode="ro" Description="Read-only access to the mnemonic from the main Machinaris container, allowing this fork to farm the same plots." Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/machinaris/mnemonic.txt</Config>
   <Config Name="plots1" Target="/plots1" Default="" Mode="rw" Description="Holds completed plots for farming. Create more Paths for additional folders like plots1,plots2,etc... " Type="Path" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="plotting" Target="/plotting" Default="" Mode="rw" Description="Your fast temp space for plotting, ideally a cache pool or unassigned SSD." Type="Path" Display="always-hide" Required="false" Mask="false"/>
@@ -133,6 +133,6 @@
   <Config Name="protocol_port" Target="7477" Default="7477" Mode="tcp" Description="The TCP port for connecting to peers.  Port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">7477</Config>
   <Config Name="farmer_port" Target="16339" Default="16339" Mode="tcp" Description="The TCP port allowing harvesters to connect with on your LAN.  DO NOT port forward at your router." Type="Port" Display="always-hide" Required="true" Mask="false">16339</Config>
   <Config Name="mode" Target="mode" Default="fullnode" Mode="" Description="Determines which services Machinaris starts.  Default is everything (aka fullnode)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">fullnode</Config>
-  <Config Name="blockchains" Target="blockchains" Default="ballcoin" Mode="" Description="The blockchain to farm.  Leave set to 'ballcoin'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">ballcoin</Config>
+  <Config Name="blockchains" Target="blockchains" Default="pipscoin" Mode="" Description="The blockchain to farm.  Leave set to 'pipscoin'." Type="Variable" Display="advanced-hide" Required="false" Mask="false">pipscoin</Config>
   <Config Name="blockchain_db_download" Target="blockchain_db_download" Default="false" Mode="" Description="On first launch, whether to download a fully synced copy of the blockchain database, avoidng hours/days of syncing.  Off by default due to inherent risks.  More at: https://github.com/guydavis/machinaris/wiki/Blockchains" Type="Variable" Display="always-hide" Required="false" Mask="false">false</Config>
 </Container>
