@@ -11,7 +11,7 @@
   <Project>https://github.com/guydavis/machinaris</Project>
   <Overview>On a secondary Unraid system, allows for harvesting of local MMX (NOT CHIA) plots.  Connects to the main Machinaris application. x86_64 required, MMX does not support aarch64.&#xD;
   &#xD;
-  PREREQUISITE: On another machine! Install the Machinaris applicatione, which this harvester container will connect with.&#xD;
+  PREREQUISITE: On another machine! Install the Machinaris application, which this harvester container will connect with.&#xD;
   &#xD;
   WARNING: Do NOT install this harvester on the same system as you installed the fullnode.  The fullnode already runs a harvester internally.  This harvester software is for a second physical server.&#xD;
   &#xD;
