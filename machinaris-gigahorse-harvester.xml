@@ -9,19 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/108896-support-machinaris-chia-crptocurrency-farming-plotman-plotting-unraid-webui/</Support>
   <Project>https://github.com/guydavis/machinaris</Project>
-  <Overview>On a secondary Unraid system, allows for harvesting of local Gigahorse plots.  Connects to the main Machinaris application. x86_64 required, Gigahorse does not support aarch64.&#xD;
-  &#xD;
-  PREREQUISITE: On another machine! Install the Machinaris application, which this harvester container will connect with.&#xD;
-  &#xD;
-  WARNING: Do NOT install this harvester on the same system as you installed the fullnode.  The fullnode already runs a harvester internally.  This harvester software is for a second physical server.&#xD;
-  &#xD;
-  INSTALL: Set the host path to first directory containing plots using '/plots1' Path. Add more Paths for additional host directories. Also be sure to set the LAN IP address of your Unraid server in the controller_host, farmer_address  and worker_address variables.&#xD;
-  &#xD;
-  SETUP: Control of this harvester will be available within the Machinaris WebUI.&#xD;
-  &#xD;
-  SUPPORT: Join the Discord server for fastest response: https://discord.gg/mX4AtMTt87 Ask a question or start a discussion on Github: https://github.com/guydavis/machinaris/discussions &#xD;
-  &#xD;
-  DISCLAIMER OF WARRANTY. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.</Overview>
+  <Overview>DEPRECATED! This toolkit is no longer supported, so install of this stale software IS NOT RECOMMENDED.</Overview>
   <Category>Crypto: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:8926]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris-gigahorse-harvester.xml</TemplateURL>
